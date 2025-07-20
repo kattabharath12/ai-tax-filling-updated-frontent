@@ -47,7 +47,8 @@ const DocumentUpload = () => {
         formData.append('files', file);
       });
 
-      const response = await axios.post('/api/documents/upload', formData, {
+      // Fixed: Remove unused response variable
+      await axios.post('/api/documents/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
